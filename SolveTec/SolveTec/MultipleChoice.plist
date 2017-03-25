@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Answers</key>
+			<array>
+				<string>2016</string>
+				<string>2017</string>
+				<string>2010</string>
+				<string>1990</string>
+			</array>
+			<key>CorrectAnswer</key>
+			<string>2017</string>
+			<key>Question</key>
+			<string>En que año estamos?</string>
+		</dict>
+        <dict>
+            <key>Answers</key>
+            <array>
+                <string>Ares</string>
+                <string>Zeus</string>
+                <string>Hades</string>
+                <string>Jupiter</string>
+            </array>
+            <key>CorrectAnswer</key>
+            <string>Zeus</string>
+            <key>Question</key>
+            <string>Quien es el padre de los dioses en mitoloía griega?</string>
+        </dict>
+        <dict>
+            <key>Answers</key>
+            <array>
+                <string>Katie</string>
+                <string>Elias</string>
+                <string>Andres</string>
+                <string>Barbs</string>
+            </array>
+            <key>CorrectAnswer</key>
+            <string>Elias</string>
+            <key>Question</key>
+            <string>Quien es el mas swag?</string>
+        </dict>
+        <dict>
+            <key>Answers</key>
+            <array>
+                <string>Incorrecta</string>
+                <string>Nope</string>
+                <string>Incorrecta</string>
+                <string>Correcta</string>
+            </array>
+            <key>CorrectAnswer</key>
+            <string>Correcta</string>
+            <key>Question</key>
+            <string>Elige la correcta</string>
+        </dict>
+	</array>
+</dict>
+</plist>
