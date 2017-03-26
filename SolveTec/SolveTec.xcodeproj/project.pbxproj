@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A166EC961E87443D005B0160 /* QuizAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166EC951E87443D005B0160 /* QuizAlertView.swift */; };
 		A16D4CBB1E86D94500240597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBA1E86D94500240597 /* AppDelegate.swift */; };
 		A16D4CBD1E86D94500240597 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBC1E86D94500240597 /* MenuViewController.swift */; };
 		A16D4CC01E86D94500240597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16D4CBE1E86D94500240597 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A166EC951E87443D005B0160 /* QuizAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizAlertView.swift; sourceTree = "<group>"; };
 		A16D4CB71E86D94500240597 /* SolveTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolveTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16D4CBA1E86D94500240597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16D4CBC1E86D94500240597 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				A16D4CF31E86DD3E00240597 /* RoundedLabel.swift */,
 				A16D4CF51E86E8C700240597 /* Constants+Extensions.swift */,
 				A16D4CFE1E870D8600240597 /* QuizLoader.swift */,
+				A166EC951E87443D005B0160 /* QuizAlertView.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				A16D4CF41E86DD3E00240597 /* RoundedLabel.swift in Sources */,
 				A16D4CFB1E86FF1F00240597 /* MultipleChoiceViewController.swift in Sources */,
 				A16D4CFF1E870D8600240597 /* QuizLoader.swift in Sources */,
+				A166EC961E87443D005B0160 /* QuizAlertView.swift in Sources */,
 				A16D4CBD1E86D94500240597 /* MenuViewController.swift in Sources */,
 				A16D4CBB1E86D94500240597 /* AppDelegate.swift in Sources */,
 				A16D4CF21E86DCE600240597 /* RoundedButton.swift in Sources */,
@@ -593,6 +597,7 @@
 				A16D4CE41E86D94600240597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16D4CE51E86D94600240597 /* Build configuration list for PBXNativeTarget "SolveTecTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +606,7 @@
 				A16D4CE71E86D94600240597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16D4CE81E86D94600240597 /* Build configuration list for PBXNativeTarget "SolveTecUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +615,7 @@
 				A16D4CEA1E86D94600240597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

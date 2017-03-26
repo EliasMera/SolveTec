@@ -46,6 +46,8 @@ class MultipleChoiceViewController: UIViewController {
     private var score = 0
     private var highscore = UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier)
 
+    private var quizAlertView: QuizAlertView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = backgroundColor
@@ -268,28 +270,36 @@ class MultipleChoiceViewController: UIViewController {
     
     // Method that shows an alert depending on the message
     func showAlert(forReason reason: Int) {
-        let avc = UIAlertController()
         switch reason {
         case 0:
-            avc.title = "Perdiste"
-            avc.message = "Se acabó el tiempo"
-        case 1:
-            avc.title = "Perdiste"
-            avc.message = "Respuesta incorrecta"
-        case 2:
-            avc.title = "Ganaste"
-            avc.message = "Contestaste todas las respuestas correctamente"
+            quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Se te acabó el tiempo", colors: [backgroundColor, foregroundColor])
         default:
             break
         }
         
-        let ok = UIAlertAction(title: "Continuar", style: .default, handler: nil)
-        avc.addAction(ok)
-        present(avc, animated: true, completion: nil)
+        // checks if alert is created
+        if let qav = quizAlertView {
+            quizAlertView?.closeButton.addTarget(self, action: #selector(closeAlert), for: .touchUpInside)
+            createQuizAlertView(withAlert: qav)
+        }
     }
     
+    // creates alert and sets constraints
+    func createQuizAlertView(withAlert alert: QuizAlertView){
+        alert.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(alert)
+        
+        // constraints for the alert
+        alert.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        alert.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        alert.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        alert.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
     
-    
+    // Returns to the main menu after alert
+    func closeAlert(){
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     
     
