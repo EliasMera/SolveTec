@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
+
+var backgroundMusicPlayer: AVAudioPlayer = AVAudioPlayer()
+var wrongMusicPlayer: AVAudioPlayer = AVAudioPlayer()
+var correctMusicPlayer: AVAudioPlayer = AVAudioPlayer()
 
 class MenuViewController: UIViewController {
     
@@ -40,6 +45,21 @@ class MenuViewController: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor.white
         view.backgroundColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1.0)
         layoutView()
+        
+        // que empiece el groovy
+        let backgroundURL = Bundle.main.url(forResource: "background", withExtension: "wav")
+        backgroundMusicPlayer = try! AVAudioPlayer(contentsOf: backgroundURL!)
+        backgroundMusicPlayer.numberOfLoops = -1 // infinitamenteeee
+        backgroundMusicPlayer.prepareToPlay()
+        backgroundMusicPlayer.play()
+        
+        let wrongURL = Bundle.main.url(forResource: "wrong", withExtension: "aiff")
+        wrongMusicPlayer = try! AVAudioPlayer(contentsOf: wrongURL!)
+        wrongMusicPlayer.prepareToPlay()
+        
+        let correctURL = Bundle.main.url(forResource: "correct", withExtension: "mp3")
+        correctMusicPlayer = try! AVAudioPlayer(contentsOf: correctURL!)
+        correctMusicPlayer.prepareToPlay()
     }
     
     override func viewWillAppear(_ animated: Bool) {

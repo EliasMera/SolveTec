@@ -10,6 +10,9 @@
 		A166EC961E87443D005B0160 /* QuizAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166EC951E87443D005B0160 /* QuizAlertView.swift */; };
 		A166EC981E874EDD005B0160 /* RightWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166EC971E874EDD005B0160 /* RightWrongViewController.swift */; };
 		A166EC9A1E874FD1005B0160 /* RightWrongQuiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = A166EC991E874FD1005B0160 /* RightWrongQuiz.plist */; };
+		A166EC9C1E875CE4005B0160 /* wrong.aiff in Resources */ = {isa = PBXBuildFile; fileRef = A166EC9B1E875CE4005B0160 /* wrong.aiff */; };
+		A166EC9E1E875CEE005B0160 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A166EC9D1E875CEE005B0160 /* correct.mp3 */; };
+		A166ECA01E875CF3005B0160 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = A166EC9F1E875CF3005B0160 /* background.wav */; };
 		A16D4CBB1E86D94500240597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBA1E86D94500240597 /* AppDelegate.swift */; };
 		A16D4CBD1E86D94500240597 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBC1E86D94500240597 /* MenuViewController.swift */; };
 		A16D4CC01E86D94500240597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16D4CBE1E86D94500240597 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		A166EC951E87443D005B0160 /* QuizAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizAlertView.swift; sourceTree = "<group>"; };
 		A166EC971E874EDD005B0160 /* RightWrongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightWrongViewController.swift; sourceTree = "<group>"; };
 		A166EC991E874FD1005B0160 /* RightWrongQuiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RightWrongQuiz.plist; sourceTree = "<group>"; };
+		A166EC9B1E875CE4005B0160 /* wrong.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = wrong.aiff; sourceTree = "<group>"; };
+		A166EC9D1E875CEE005B0160 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		A166EC9F1E875CF3005B0160 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
 		A16D4CB71E86D94500240597 /* SolveTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolveTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16D4CBA1E86D94500240597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16D4CBC1E86D94500240597 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,9 @@
 		A16D4CEF1E86D9F000240597 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A166EC9F1E875CF3005B0160 /* background.wav */,
+				A166EC9D1E875CEE005B0160 /* correct.mp3 */,
+				A166EC9B1E875CE4005B0160 /* wrong.aiff */,
 				A16D4CF71E86FA2800240597 /* Images */,
 			);
 			name = Resources;
@@ -323,7 +332,10 @@
 			files = (
 				A16D4CFD1E870AC300240597 /* MultipleChoice.plist in Resources */,
 				A16D4CF91E86FA6B00240597 /* logo.png in Resources */,
+				A166ECA01E875CF3005B0160 /* background.wav in Resources */,
 				A16D4CC81E86D94500240597 /* LaunchScreen.storyboard in Resources */,
+				A166EC9E1E875CEE005B0160 /* correct.mp3 in Resources */,
+				A166EC9C1E875CE4005B0160 /* wrong.aiff in Resources */,
 				A16D4CC51E86D94500240597 /* Assets.xcassets in Resources */,
 				A166EC9A1E874FD1005B0160 /* RightWrongQuiz.plist in Resources */,
 				A16D4CC01E86D94500240597 /* Main.storyboard in Resources */,

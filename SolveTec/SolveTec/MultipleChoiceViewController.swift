@@ -180,6 +180,7 @@ class MultipleChoiceViewController: UIViewController {
     func loadQuestions() {
         do {
             questionArray = try quizLoader.loadMultipleChoiceQuiz(forQuiz: "MultipleChoice")
+            questionArray.shuffle()
             loadNextQuestion()
         } catch {
             switch error {
@@ -253,10 +254,12 @@ class MultipleChoiceViewController: UIViewController {
     func answerButtonHandler(_ sender: RoundedButton){
         timer.invalidate()
         if sender.titleLabel?.text == currentQuestion.correctAnswer {
+            correctMusicPlayer.play()
             score += 1
             questionLabel.text = "Click aqui para continuar"
             questionButton.isEnabled = true
         } else {
+            wrongMusicPlayer.play()
             sender.backgroundColor = flatRed
             showAlert(forReason: 1)
         }

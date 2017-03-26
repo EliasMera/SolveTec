@@ -9,6 +9,23 @@
 import Foundation
 import UIKit
 
+// Extension para shufflear las preguntas
+extension Array {
+    mutating func shuffle() {
+        if count < 2 {
+            return
+        }
+        
+        for i in 0..<(count - 1) {
+            var j = 0
+            while j == i {
+                j = Int(arc4random_uniform(UInt32(count - i))) + 1
+            }
+            swap(&self[i], &self[j])
+        }
+    }
+}
+
 let falsoVerdaderoHighScoreIdentifier = "FalsoVerdaderoHighScoreIdentifier"
 let falsoVerdaderoRecentScoreIdentifier = "FalsoVerdaderoRecentScoreIdentifier"
 
