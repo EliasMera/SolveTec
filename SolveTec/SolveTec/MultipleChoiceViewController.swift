@@ -78,7 +78,7 @@ class MultipleChoiceViewController: UIViewController {
         questionLabel.adjustsFontSizeToFitWidth = true
         questionButton.translatesAutoresizingMaskIntoConstraints = false
         questionView.addSubview(questionButton)
-        questionButton.addTarget(self, action: #selector(questionButtonHandler), for: .touchUpInside)
+        //questionButton.addTarget(self, action: #selector(questionButtonHandler), for: .touchUpInside)
         questionButton.isEnabled = false
         
         answerView.translatesAutoresizingMaskIntoConstraints = false
@@ -243,37 +243,32 @@ class MultipleChoiceViewController: UIViewController {
         showAlert(forReason: 0)
     }
     
-    func questionButtonHandler() {
-        questionButton.isEnabled = false
-        questionIndex += 1
-        // Checks if the user answered all the questions
-        if questionIndex >= questionArray.count {
-            questionIndex = 0
-            questionArray.shuffle()
-        }
-        loadNextQuestion()
-    }
-    
     // colors the button if correct, or incorrect
     func answerButtonHandler(_ sender: RoundedButton){
         //timer.invalidate()
         if sender.titleLabel?.text == currentQuestion.correctAnswer {
             correctMusicPlayer.play()
             score += 1
-            questionLabel.text = "Click aquí para continuar"
-            questionButton.isEnabled = true
         } else {
             wrongMusicPlayer.play()
             sender.backgroundColor = flatRed
-            questionLabel.text = "Click aquí para continuar"
-            questionButton.isEnabled = true
-            //showAlert(forReason: 1)
         }
         for button in answerButtons {
             button.isEnabled = false
             if button.titleLabel?.text == currentQuestion.correctAnswer {
                 button.backgroundColor = flatGreen
             }
+        }
+        
+        // waits to change question
+        let when = DispatchTime.now() + 0.35 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.questionIndex += 1
+            if self.questionIndex >= self.questionArray.count {
+                self.questionIndex = 0
+                self.questionArray.shuffle()
+            }
+            self.loadNextQuestion()
         }
     }
     
