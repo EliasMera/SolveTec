@@ -273,6 +273,10 @@ class MultipleChoiceViewController: UIViewController {
         switch reason {
         case 0:
             quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Se te acabó el tiempo", colors: [backgroundColor, foregroundColor])
+        case 1:
+            quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Respuesta incorrecta", colors: [backgroundColor, foregroundColor])
+        case 2:
+            quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Contestaste todas las preguntas de manera correcta!", colors: [backgroundColor, foregroundColor])
         default:
             break
         }
@@ -296,8 +300,14 @@ class MultipleChoiceViewController: UIViewController {
         alert.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
-    // Returns to the main menu after alert
+    // Returns to the main menu after alert and updates the scores
     func closeAlert(){
+        // checks the highscore
+        if score > highscore {
+            highscore = score
+            UserDefaults.standard.set(highscore, forKey: multipleChoiceHighScoreIdentifier)
+        }
+        UserDefaults.standard.set(score, forKey: multipleChoiceRecentScoreIdentifier)
         _ = navigationController?.popViewController(animated: true)
     }
     

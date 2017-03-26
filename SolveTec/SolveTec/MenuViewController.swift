@@ -50,13 +50,13 @@ class MenuViewController: UIViewController {
     // Method that updates scores periodically
     func updateScores(){
         recentScores = [
-            UserDefaults.standard.integer(forKey: multipleChoiceRecentScoreIdentifier),
-            UserDefaults.standard.integer(forKey: falsoVerdaderoRecentScoreIdentifier)
+            UserDefaults.standard.integer(forKey: falsoVerdaderoRecentScoreIdentifier),
+            UserDefaults.standard.integer(forKey: multipleChoiceRecentScoreIdentifier)
         ]
         
         highScores = [
-            UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier),
-            UserDefaults.standard.integer(forKey: falsoVerdaderoHighScoreIdentifier)
+            UserDefaults.standard.integer(forKey: falsoVerdaderoHighScoreIdentifier),
+            UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier)
         ]
     }
     
@@ -106,8 +106,8 @@ class MenuViewController: UIViewController {
         
         // This will be updated dinamically on-game
         titleLabel.text = titles[scoreIndex]
-        recentScoreLabel.text = "Recent: " + String(UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier))
-        highscoreLabel.text = "Highscore: " + String(UserDefaults.standard.integer(forKey: multipleChoiceRecentScoreIdentifier))
+        recentScoreLabel.text = "Reciente: " + String(UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier))
+        highscoreLabel.text = "Récord: " + String(UserDefaults.standard.integer(forKey: multipleChoiceRecentScoreIdentifier))
         
         // Adds constraints
         let constraints = [
@@ -192,8 +192,8 @@ class MenuViewController: UIViewController {
             self.view.layoutIfNeeded()
         }) { (completion: Bool) in
                 self.titleLabel.text = self.titles[self.scoreIndex]
-                self.recentScoreLabel.text = "Recent: " + String(self.recentScores[self.scoreIndex])
-                self.highscoreLabel.text = "Highscore " + String(self.highScores[self.scoreIndex])
+                self.recentScoreLabel.text = "Reciente: " + String(self.recentScores[self.scoreIndex])
+                self.highscoreLabel.text = "Récord " + String(self.highScores[self.scoreIndex])
                 NSLayoutConstraint.deactivate(self.leftConstraints)
                 NSLayoutConstraint.activate(self.rightConstraints)
                 self.view.layoutIfNeeded()
