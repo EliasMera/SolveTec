@@ -1,5 +1,5 @@
 //
-//  MultipleChoiceViewController.swift
+//  RightWrongViewController.swift
 //  SolveTec
 //
 //  Created by Elias Mera on 3/25/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultipleChoiceViewController: UIViewController {
+class RightWrongViewController: UIViewController {
     
     // Creates graphic elements
     private let contentView = UIView()
@@ -38,13 +38,14 @@ class MultipleChoiceViewController: UIViewController {
     private let foregroundColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
     
     private let quizLoader = QuizLoader()
-    private var questionArray = [MultipleChoiceQuestion]()
+    private var questionArray = [SimpleQuestion]()
     private var questionIndex = 0
-    private var currentQuestion: MultipleChoiceQuestion!
+    private var currentQuestion: SimpleQuestion!
     
     private var timer = Timer()
     private var score = 0
-    private var highscore = UserDefaults.standard.integer(forKey: multipleChoiceHighScoreIdentifier)
+    // Change identifier
+    private var highscore = UserDefaults.standard.integer(forKey: falsoVerdaderoHighScoreIdentifier)
 
     private var quizAlertView: QuizAlertView?
     
@@ -82,11 +83,12 @@ class MultipleChoiceViewController: UIViewController {
         
         answerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(answerView)
-        for _ in 0...3 { // Adds 4 different options
+        for index in 0...1 {
             let button = RoundedButton()
             answerButtons.append(button)
             button.translatesAutoresizingMaskIntoConstraints = false
             answerView.addSubview(button)
+            index == 0 ? button.setTitle("Verdadero", for: .normal) : button.setTitle("Falso", for: .normal)
             button.addTarget(self, action: #selector(answerButtonHandler), for: .touchUpInside)
         }
         
@@ -133,24 +135,15 @@ class MultipleChoiceViewController: UIViewController {
         
         answerButtonsConstraints = [
             answerButtons[0].leadingAnchor.constraint(equalTo: answerView.leadingAnchor),
-            answerButtons[0].trailingAnchor.constraint(equalTo: answerButtons[1].leadingAnchor, constant: -8.0),
+            answerButtons[0].trailingAnchor.constraint(equalTo: answerView.trailingAnchor),
             answerButtons[0].topAnchor.constraint(equalTo: answerView.topAnchor),
-            answerButtons[0].bottomAnchor.constraint(equalTo: answerButtons[2].topAnchor, constant: -8.0),
+            answerButtons[0].bottomAnchor.constraint(equalTo: answerButtons[1].topAnchor, constant: -8.0),
+            answerButtons[1].leadingAnchor.constraint(equalTo: answerView.leadingAnchor),
             answerButtons[1].trailingAnchor.constraint(equalTo: answerView.trailingAnchor),
-            answerButtons[1].topAnchor.constraint(equalTo: answerView.topAnchor),
-            answerButtons[1].bottomAnchor.constraint(equalTo: answerButtons[3].topAnchor, constant: -8.0),
-            answerButtons[2].leadingAnchor.constraint(equalTo: answerView.leadingAnchor),
-            answerButtons[2].trailingAnchor.constraint(equalTo: answerButtons[3].leadingAnchor, constant: -8.0),
-            answerButtons[2].bottomAnchor.constraint(equalTo: answerView.bottomAnchor),
-            answerButtons[3].trailingAnchor.constraint(equalTo: answerView.trailingAnchor),
-            answerButtons[3].bottomAnchor.constraint(equalTo: answerView.bottomAnchor)
+            answerButtons[1].bottomAnchor.constraint(equalTo: answerView.bottomAnchor),
+            answerButtons[0].heightAnchor.constraint(equalTo: answerButtons[1].heightAnchor),
+            answerButtons[0].widthAnchor.constraint(equalTo: answerButtons[1].widthAnchor)
         ]
-        
-        // every button of the same size
-        for index in 1..<answerButtons.count {
-            answerButtonsConstraints.append(answerButtons[index].heightAnchor.constraint(equalTo: answerButtons[index - 1].heightAnchor))
-            answerButtonsConstraints.append(answerButtons[index].widthAnchor.constraint(equalTo: answerButtons[index - 1].widthAnchor))
-        }
         
         countdownViewConstraints = [
             countdownView.topAnchor.constraint(equalTo: answerView.bottomAnchor, constant: 20.0),
@@ -179,7 +172,7 @@ class MultipleChoiceViewController: UIViewController {
     // Loads questions duuh
     func loadQuestions() {
         do {
-            questionArray = try quizLoader.loadMultipleChoiceQuiz(forQuiz: "MultipleChoice")
+            questionArray = try quizLoader.loadSimpleQuiz(forQuiz: "RightWrongQuiz")
             loadNextQuestion()
         } catch {
             switch error {
@@ -201,11 +194,10 @@ class MultipleChoiceViewController: UIViewController {
     
     // Sets titles for buttons duuh x3
     func setTitlesForButtons(){
-        for(index,button) in answerButtons.enumerated() {
-            button.titleLabel?.lineBreakMode = .byWordWrapping
-            button.setTitle(currentQuestion.answers[index], for: .normal)
+        for button in answerButtons {
             button.isEnabled = true
             button.backgroundColor = foregroundColor
+            button.setTitleColor(UIColor.white, for: .normal)
         }
         questionLabel.text = currentQuestion.question
         startTimer()
@@ -305,9 +297,9 @@ class MultipleChoiceViewController: UIViewController {
         // checks the highscore
         if score > highscore {
             highscore = score
-            UserDefaults.standard.set(highscore, forKey: multipleChoiceHighScoreIdentifier)
+            UserDefaults.standard.set(highscore, forKey: falsoVerdaderoHighScoreIdentifier)
         }
-        UserDefaults.standard.set(score, forKey: multipleChoiceRecentScoreIdentifier)
+        UserDefaults.standard.set(score, forKey: falsoVerdaderoRecentScoreIdentifier)
         _ = navigationController?.popViewController(animated: true)
     }
     

@@ -168,7 +168,7 @@ class MenuViewController: UIViewController {
         switch sender.tag {
         case 0:
             // Falso y verdadero
-            print("Falso y verdadero")
+            vc = RightWrongViewController()
         case 1:
             // Multiple Choice
             vc = MultipleChoiceViewController()

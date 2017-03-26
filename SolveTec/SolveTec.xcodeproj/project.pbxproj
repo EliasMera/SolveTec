@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A166EC961E87443D005B0160 /* QuizAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166EC951E87443D005B0160 /* QuizAlertView.swift */; };
+		A166EC981E874EDD005B0160 /* RightWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A166EC971E874EDD005B0160 /* RightWrongViewController.swift */; };
+		A166EC9A1E874FD1005B0160 /* RightWrongQuiz.plist in Resources */ = {isa = PBXBuildFile; fileRef = A166EC991E874FD1005B0160 /* RightWrongQuiz.plist */; };
 		A16D4CBB1E86D94500240597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBA1E86D94500240597 /* AppDelegate.swift */; };
 		A16D4CBD1E86D94500240597 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D4CBC1E86D94500240597 /* MenuViewController.swift */; };
 		A16D4CC01E86D94500240597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16D4CBE1E86D94500240597 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		A166EC951E87443D005B0160 /* QuizAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizAlertView.swift; sourceTree = "<group>"; };
+		A166EC971E874EDD005B0160 /* RightWrongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightWrongViewController.swift; sourceTree = "<group>"; };
+		A166EC991E874FD1005B0160 /* RightWrongQuiz.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RightWrongQuiz.plist; sourceTree = "<group>"; };
 		A16D4CB71E86D94500240597 /* SolveTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolveTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16D4CBA1E86D94500240597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A16D4CBC1E86D94500240597 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			children = (
 				A16D4CBC1E86D94500240597 /* MenuViewController.swift */,
 				A16D4CFA1E86FF1F00240597 /* MultipleChoiceViewController.swift */,
+				A166EC971E874EDD005B0160 /* RightWrongViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				A16D4CFC1E870AC300240597 /* MultipleChoice.plist */,
+				A166EC991E874FD1005B0160 /* RightWrongQuiz.plist */,
 			);
 			name = Questions;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				A16D4CF91E86FA6B00240597 /* logo.png in Resources */,
 				A16D4CC81E86D94500240597 /* LaunchScreen.storyboard in Resources */,
 				A16D4CC51E86D94500240597 /* Assets.xcassets in Resources */,
+				A166EC9A1E874FD1005B0160 /* RightWrongQuiz.plist in Resources */,
 				A16D4CC01E86D94500240597 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +358,7 @@
 				A166EC961E87443D005B0160 /* QuizAlertView.swift in Sources */,
 				A16D4CBD1E86D94500240597 /* MenuViewController.swift in Sources */,
 				A16D4CBB1E86D94500240597 /* AppDelegate.swift in Sources */,
+				A166EC981E874EDD005B0160 /* RightWrongViewController.swift in Sources */,
 				A16D4CF21E86DCE600240597 /* RoundedButton.swift in Sources */,
 				A16D4CF61E86E8C700240597 /* Constants+Extensions.swift in Sources */,
 			);
