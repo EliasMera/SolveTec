@@ -53,6 +53,7 @@ class MultipleChoiceViewController: UIViewController {
         view.backgroundColor = backgroundColor
         layoutView()
         loadQuestions()
+        startTimer()
     }
     
     // Makes the navigation bar appear in top of the screen
@@ -209,7 +210,6 @@ class MultipleChoiceViewController: UIViewController {
             button.backgroundColor = foregroundColor
         }
         questionLabel.text = currentQuestion.question
-        startTimer()
     }
     
     
@@ -247,21 +247,27 @@ class MultipleChoiceViewController: UIViewController {
         questionButton.isEnabled = false
         questionIndex += 1
         // Checks if the user answered all the questions
-        questionIndex < questionArray.count ? loadNextQuestion() : showAlert(forReason: 2)
+        if questionIndex >= questionArray.count {
+            questionIndex = 0
+            questionArray.shuffle()
+        }
+        loadNextQuestion()
     }
     
     // colors the button if correct, or incorrect
     func answerButtonHandler(_ sender: RoundedButton){
-        timer.invalidate()
+        //timer.invalidate()
         if sender.titleLabel?.text == currentQuestion.correctAnswer {
             correctMusicPlayer.play()
             score += 1
-            questionLabel.text = "Click aqui para continuar"
+            questionLabel.text = "Click aquí para continuar"
             questionButton.isEnabled = true
         } else {
             wrongMusicPlayer.play()
             sender.backgroundColor = flatRed
-            showAlert(forReason: 1)
+            questionLabel.text = "Click aquí para continuar"
+            questionButton.isEnabled = true
+            //showAlert(forReason: 1)
         }
         for button in answerButtons {
             button.isEnabled = false
@@ -275,7 +281,7 @@ class MultipleChoiceViewController: UIViewController {
     func showAlert(forReason reason: Int) {
         switch reason {
         case 0:
-            quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Se te acabó el tiempo", colors: [backgroundColor, foregroundColor])
+            quizAlertView = QuizAlertView(withTitle: "Se acabó el tiempo", andMessage: "Puntuación " + String(score), colors: [backgroundColor, foregroundColor])
         case 1:
             quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Respuesta incorrecta", colors: [backgroundColor, foregroundColor])
         case 2:
@@ -322,12 +328,4 @@ class MultipleChoiceViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    
-    
-    
-    
-    
-    
-
 }

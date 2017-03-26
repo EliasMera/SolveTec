@@ -54,6 +54,7 @@ class RightWrongViewController: UIViewController {
         view.backgroundColor = backgroundColor
         layoutView()
         loadQuestions()
+        startTimer()
     }
     
     // Makes the navigation bar appear in top of the screen
@@ -201,7 +202,6 @@ class RightWrongViewController: UIViewController {
             button.setTitleColor(UIColor.white, for: .normal)
         }
         questionLabel.text = currentQuestion.question
-        startTimer()
     }
     
     
@@ -238,22 +238,28 @@ class RightWrongViewController: UIViewController {
     func questionButtonHandler() {
         questionButton.isEnabled = false
         questionIndex += 1
-        // Checks if the user answered all the questions
-        questionIndex < questionArray.count ? loadNextQuestion() : showAlert(forReason: 2)
+        
+        if questionIndex >= questionArray.count {
+            questionIndex = 0
+            questionArray.shuffle()
+        }
+        loadNextQuestion()
     }
     
     // colors the button if correct, or incorrect
     func answerButtonHandler(_ sender: RoundedButton){
-        timer.invalidate()
+        //timer.invalidate()
         if sender.titleLabel?.text == currentQuestion.correctAnswer {
             correctMusicPlayer.play()
             score += 1
-            questionLabel.text = "Click aqui para continuar"
+            questionLabel.text = "Click aquí para continuar"
             questionButton.isEnabled = true
         } else {
             wrongMusicPlayer.play()
             sender.backgroundColor = flatRed
-            showAlert(forReason: 1)
+            questionButton.isEnabled = true
+            questionLabel.text = "Click aquí para continuar"
+            //showAlert(forReason: 1)
         }
         for button in answerButtons {
             button.isEnabled = false
@@ -267,7 +273,7 @@ class RightWrongViewController: UIViewController {
     func showAlert(forReason reason: Int) {
         switch reason {
         case 0:
-            quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Se te acabó el tiempo", colors: [backgroundColor, foregroundColor])
+            quizAlertView = QuizAlertView(withTitle: "Se acabó el tiempo", andMessage: "Puntuación " + String(score), colors: [backgroundColor, foregroundColor])
         case 1:
             quizAlertView = QuizAlertView(withTitle: "Fin del juego", andMessage: "Respuesta incorrecta", colors: [backgroundColor, foregroundColor])
         case 2:
