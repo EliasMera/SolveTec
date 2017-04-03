@@ -184,7 +184,7 @@ class MenuViewController: UIViewController {
     // Method give functionality to our buttons
     func buttonHandler(sender: RoundedButton){
         var vc: UIViewController?
-        
+
         switch sender.tag {
         case 0:
             // Falso y verdadero

@@ -59,7 +59,7 @@ class RightWrongViewController: UIViewController {
     
     // Makes the navigation bar appear in top of the screen
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isHidden = true
     }
     
     // Initializer Adds constraints and views to screen
@@ -239,10 +239,10 @@ class RightWrongViewController: UIViewController {
     func answerButtonHandler(_ sender: RoundedButton){
         //timer.invalidate()
         if sender.titleLabel?.text == currentQuestion.correctAnswer {
-            correctMusicPlayer.play()
+            //correctMusicPlayer.play()
             score += 1
         } else {
-            wrongMusicPlayer.play()
+            //wrongMusicPlayer.play()
             sender.backgroundColor = flatRed
             questionButton.isEnabled = true
         }
@@ -254,7 +254,7 @@ class RightWrongViewController: UIViewController {
         }
         
         // waits to change question
-        let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
+        let when = DispatchTime.now() + 0.35 // delays for 35 ms
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.questionIndex += 1
             if self.questionIndex >= self.questionArray.count {
@@ -305,7 +305,11 @@ class RightWrongViewController: UIViewController {
             UserDefaults.standard.set(highscore, forKey: falsoVerdaderoHighScoreIdentifier)
         }
         UserDefaults.standard.set(score, forKey: falsoVerdaderoRecentScoreIdentifier)
-        _ = navigationController?.popViewController(animated: true)
+        //_ = navigationController?.popViewController(animated: true)
+        
+        // Lleva a resultados
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "resultados")
+        navigationController?.pushViewController(vc!, animated: true)
     }
     
     
@@ -316,12 +320,4 @@ class RightWrongViewController: UIViewController {
             timer.invalidate()
         }
     }
-    
-    
-    
-    
-    
-    
-    
-
 }

@@ -261,7 +261,7 @@ class MultipleChoiceViewController: UIViewController {
         }
         
         // waits to change question
-        let when = DispatchTime.now() + 0.35 // change 2 to desired number of seconds
+        let when = DispatchTime.now() + 0.35 // delays for 35 ms
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.questionIndex += 1
             if self.questionIndex >= self.questionArray.count {

@@ -19,7 +19,7 @@ extension Array {
         for i in 0..<(count - 1) {
             var j = 0
             while j == i {
-                j = Int(arc4random_uniform(UInt32(count)))
+                j = Int(arc4random_uniform(UInt32(count - i))) + i
             }
             swap(&self[i], &self[j])
         }
