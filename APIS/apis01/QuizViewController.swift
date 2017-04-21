@@ -9,7 +9,7 @@
 import UIKit
 
 class QuizViewController: UIViewController {
-
+    
 	// Creates graphic elements
 	private let contentView = UIView()
 	private var contentViewConstraints: [NSLayoutConstraint]!
@@ -61,6 +61,22 @@ class QuizViewController: UIViewController {
 				totalTime = Double(segundos!)!
 			}
 		}
+        
+        // Pone todo en 0
+        if let path = Bundle.main.path(forResource: "categorias", ofType: "plist") {
+            if let arrCategory = NSMutableArray(contentsOfFile: path) {
+                let tempArray: Array = Array(arrCategory) as! [NSMutableDictionary]
+                for dictionary in tempArray {
+                    dictionary["amount_questions_right"] = "0"
+                    dictionary["amount_questions"] = "0"
+                }
+                arrCategory.write(toFile: path, atomically: true)
+            }
+            else{
+                print("no cargo bien")
+            }
+        }
+
 		
 		loadQuestions()
 		layoutView()
@@ -332,10 +348,44 @@ class QuizViewController: UIViewController {
 		if sender.titleLabel?.text == currentQuestion.correctAnswer {
 			//correctMusicPlayer.play()
 			score += 5
+            
+            // Pone algo bien
+            if let path = Bundle.main.path(forResource: "categorias", ofType: "plist") {
+                if let arrCategory = NSMutableArray(contentsOfFile: path) {
+                    let tempArray: Array = Array(arrCategory) as! [NSMutableDictionary]
+                    for dictionary in tempArray {
+                        if dictionary["id"] as! String == currentQuestion.category {
+                            dictionary["amount_questions_right"] = String(Int(dictionary["amount_questions_right"] as! String!)! + 1)
+                            dictionary["amount_questions"] = String(Int(dictionary["amount_questions"] as! String!)! + 1)
+                        }
+                    }
+                    arrCategory.write(toFile: path, atomically: true)
+                }
+                else{
+                    print("no cargo bien")
+                }
+            }
+
 		} else {
 			//wrongMusicPlayer.play()
 			sender.backgroundColor = flatRed
 			questionButton.isEnabled = true
+            
+            // Pone algo mal
+            if let path = Bundle.main.path(forResource: "categorias", ofType: "plist") {
+                if let arrCategory = NSMutableArray(contentsOfFile: path) {
+                    let tempArray: Array = Array(arrCategory) as! [NSMutableDictionary]
+                    for dictionary in tempArray {
+                        if dictionary["id"] as! String == currentQuestion.category {
+                            dictionary["amount_questions"] = String(Int(dictionary["amount_questions"] as! String!)! + 1)
+                        }
+                    }
+                    arrCategory.write(toFile: path, atomically: true)
+                }
+                else{
+                    print("no cargo bien")
+                }
+            }
 		}
 		for button in answerButtons {
 			button.isEnabled = false
@@ -343,6 +393,9 @@ class QuizViewController: UIViewController {
 				button.backgroundColor = flatGreen
 			}
 		}
+        
+        // actualiza categoria
+        
 		
 		
 		
@@ -404,7 +457,6 @@ class QuizViewController: UIViewController {
         // actualiza plist
         if let path = Bundle.main.path(forResource: "userProfile", ofType: "plist") {
             if let dic = NSMutableDictionary(contentsOfFile: path) {
-                var hs = Int(dic["highscore"] as! String)!
                 var nivel = Int(dic["nivel"] as! String)!
                 var puntMeta = Int(dic["puntajeMeta"] as! String)!
                 var juegRest = Int(dic["juegosRestantes"] as! String)!

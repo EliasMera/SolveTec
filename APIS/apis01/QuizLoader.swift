@@ -13,6 +13,7 @@ struct MultipleChoiceQuestion {
 	let question: String
 	let correctAnswer: String
 	let answers: [String]
+    let category: String
 }
 
 enum LoaderError: Error {
@@ -30,7 +31,8 @@ class QuizLoader {
 					let questionToAdd = MultipleChoiceQuestion(
 						question: dictionary["pregunta"] as! String,
 						correctAnswer: dictionary["correct_option"] as! String,
-						answers: dictionary["options"] as! [String])
+						answers: dictionary["options"] as! [String],
+						category: dictionary["id_categoria"] as! String)
 					questions.append(questionToAdd)
 				}
 				
