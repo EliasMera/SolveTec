@@ -1,9 +1,0 @@
-version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "fe5698ca3ba3dc9d76bbf8c16c2e6e47"
-build_time: [545268646, 434985000]
-inputs:
-  "/Users/andresaltamirano/Desktop/apis01/apis01/TabBarViewController.swift": [545195514, 0]
-  "/Users/andresaltamirano/Desktop/apis01/ProfileViewController.swift": [545195775, 0]
-  "/Users/andresaltamirano/Desktop/apis01/apis01/ViewController.swift": [545195516, 0]
-  "/Users/andresaltamirano/Desktop/apis01/apis01/TopicViewController.swift": [545267320, 0]
-  "/Users/andresaltamirano/Desktop/apis01/apis01/AppDelegate.swift": [545105480, 0]

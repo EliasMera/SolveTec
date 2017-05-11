@@ -1,0 +1,483 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BeginQuizViewController"
+provides-nominal:
+- "C6apis0123BeginQuizViewController"
+provides-member:
+- ["C6apis0123BeginQuizViewController", ""]
+provides-dynamic-lookup:
+- "viewDidAppear"
+- "didReceiveMemoryWarning"
+- "puntajeAnterior"
+- "puntajeMaximo"
+- "btnIniciar"
+- "viewDidLoad"
+depends-top-level:
+- !private "String"
+- "UILabel"
+- "UIViewController"
+- !private "BooleanLiteralType"
+- "BeginQuizViewController"
+- !private "quizRecentScoreIdentifier"
+- "Bool"
+- !private "UserDefaults"
+- "UIButton"
+- "AssignmentPrecedence"
+- !private "quizHighScoreIdentifier"
+depends-member:
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UserDefaults"]
+- ["Ps9AnyObject", "btnIniciar"]
+- !private ["Ps9AnyObject", "clipsToBounds"]
+- !private ["Ps9AnyObject", "cornerRadius"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "integer"]
+- !private ["Ps9AnyObject", "layer"]
+- ["Ps9AnyObject", "puntajeAnterior"]
+- ["Ps9AnyObject", "puntajeMaximo"]
+- !private ["Ps9AnyObject", "quizHighScoreIdentifier"]
+- !private ["Ps9AnyObject", "quizRecentScoreIdentifier"]
+- !private ["Ps9AnyObject", "standard"]
+- !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "viewDidAppear"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["C6apis0123BeginQuizViewController", "Bool"]
+- !private ["C6apis0123BeginQuizViewController", "String"]
+- ["C6apis0123BeginQuizViewController", "UIButton"]
+- ["C6apis0123BeginQuizViewController", "UILabel"]
+- !private ["C6apis0123BeginQuizViewController", "UserDefaults"]
+- ["C6apis0123BeginQuizViewController", "btnIniciar"]
+- ["C6apis0123BeginQuizViewController", "deinit"]
+- ["C6apis0123BeginQuizViewController", "didReceiveMemoryWarning"]
+- ["C6apis0123BeginQuizViewController", "init"]
+- ["C6apis0123BeginQuizViewController", "puntajeAnterior"]
+- ["C6apis0123BeginQuizViewController", "puntajeMaximo"]
+- !private ["C6apis0123BeginQuizViewController", "quizHighScoreIdentifier"]
+- !private ["C6apis0123BeginQuizViewController", "quizRecentScoreIdentifier"]
+- ["C6apis0123BeginQuizViewController", "viewDidAppear"]
+- ["C6apis0123BeginQuizViewController", "viewDidLoad"]
+- ["Sb", "deinit"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- ["CSo7CALayer", "deinit"]
+- !private ["PSo15CALayerDelegate", "clipsToBounds"]
+- !private ["PSo15CALayerDelegate", "layer"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps7CVarArg", "String"]
+- !private ["Ps7CVarArg", "UserDefaults"]
+- ["Ps7CVarArg", "btnIniciar"]
+- !private ["Ps7CVarArg", "clipsToBounds"]
+- !private ["Ps7CVarArg", "cornerRadius"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "integer"]
+- !private ["Ps7CVarArg", "layer"]
+- ["Ps7CVarArg", "puntajeAnterior"]
+- ["Ps7CVarArg", "puntajeMaximo"]
+- !private ["Ps7CVarArg", "quizHighScoreIdentifier"]
+- !private ["Ps7CVarArg", "quizRecentScoreIdentifier"]
+- !private ["Ps7CVarArg", "standard"]
+- !private ["Ps7CVarArg", "text"]
+- ["Ps7CVarArg", "viewDidAppear"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- !private ["Ps28CustomDebugStringConvertible", "UserDefaults"]
+- ["Ps28CustomDebugStringConvertible", "btnIniciar"]
+- !private ["Ps28CustomDebugStringConvertible", "clipsToBounds"]
+- !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "integer"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
+- ["Ps28CustomDebugStringConvertible", "puntajeAnterior"]
+- ["Ps28CustomDebugStringConvertible", "puntajeMaximo"]
+- !private ["Ps28CustomDebugStringConvertible", "quizHighScoreIdentifier"]
+- !private ["Ps28CustomDebugStringConvertible", "quizRecentScoreIdentifier"]
+- !private ["Ps28CustomDebugStringConvertible", "standard"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- !private ["Ps23CustomStringConvertible", "UserDefaults"]
+- ["Ps23CustomStringConvertible", "btnIniciar"]
+- !private ["Ps23CustomStringConvertible", "clipsToBounds"]
+- !private ["Ps23CustomStringConvertible", "cornerRadius"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "integer"]
+- !private ["Ps23CustomStringConvertible", "layer"]
+- ["Ps23CustomStringConvertible", "puntajeAnterior"]
+- ["Ps23CustomStringConvertible", "puntajeMaximo"]
+- !private ["Ps23CustomStringConvertible", "quizHighScoreIdentifier"]
+- !private ["Ps23CustomStringConvertible", "quizRecentScoreIdentifier"]
+- !private ["Ps23CustomStringConvertible", "standard"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", "viewDidAppear"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "UserDefaults"]
+- ["Ps9Equatable", "btnIniciar"]
+- !private ["Ps9Equatable", "clipsToBounds"]
+- !private ["Ps9Equatable", "cornerRadius"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "integer"]
+- !private ["Ps9Equatable", "layer"]
+- ["Ps9Equatable", "puntajeAnterior"]
+- ["Ps9Equatable", "puntajeMaximo"]
+- !private ["Ps9Equatable", "quizHighScoreIdentifier"]
+- !private ["Ps9Equatable", "quizRecentScoreIdentifier"]
+- !private ["Ps9Equatable", "standard"]
+- !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", "viewDidAppear"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "UserDefaults"]
+- ["Ps8Hashable", "btnIniciar"]
+- !private ["Ps8Hashable", "clipsToBounds"]
+- !private ["Ps8Hashable", "cornerRadius"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "integer"]
+- !private ["Ps8Hashable", "layer"]
+- ["Ps8Hashable", "puntajeAnterior"]
+- ["Ps8Hashable", "puntajeMaximo"]
+- !private ["Ps8Hashable", "quizHighScoreIdentifier"]
+- !private ["Ps8Hashable", "quizRecentScoreIdentifier"]
+- !private ["Ps8Hashable", "standard"]
+- !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", "viewDidAppear"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
+- ["Si", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "String"]
+- !private ["PSo8NSCoding", "UserDefaults"]
+- ["PSo8NSCoding", "btnIniciar"]
+- !private ["PSo8NSCoding", "clipsToBounds"]
+- !private ["PSo8NSCoding", "cornerRadius"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "layer"]
+- ["PSo8NSCoding", "puntajeAnterior"]
+- ["PSo8NSCoding", "puntajeMaximo"]
+- !private ["PSo8NSCoding", "quizHighScoreIdentifier"]
+- !private ["PSo8NSCoding", "quizRecentScoreIdentifier"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "viewDidAppear"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "String"]
+- !private ["PSo26NSExtensionRequestHandling", "UserDefaults"]
+- ["PSo26NSExtensionRequestHandling", "btnIniciar"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "puntajeAnterior"]
+- ["PSo26NSExtensionRequestHandling", "puntajeMaximo"]
+- !private ["PSo26NSExtensionRequestHandling", "quizHighScoreIdentifier"]
+- !private ["PSo26NSExtensionRequestHandling", "quizRecentScoreIdentifier"]
+- ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "Bool"]
+- !private ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UIButton"]
+- ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "UserDefaults"]
+- ["CSo8NSObject", "btnIniciar"]
+- !private ["CSo8NSObject", "clipsToBounds"]
+- !private ["CSo8NSObject", "cornerRadius"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "integer"]
+- !private ["CSo8NSObject", "layer"]
+- ["CSo8NSObject", "puntajeAnterior"]
+- ["CSo8NSObject", "puntajeMaximo"]
+- !private ["CSo8NSObject", "quizHighScoreIdentifier"]
+- !private ["CSo8NSObject", "quizRecentScoreIdentifier"]
+- !private ["CSo8NSObject", "standard"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidAppear"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UserDefaults"]
+- ["PSo16NSObjectProtocol", "btnIniciar"]
+- !private ["PSo16NSObjectProtocol", "clipsToBounds"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "integer"]
+- !private ["PSo16NSObjectProtocol", "layer"]
+- ["PSo16NSObjectProtocol", "puntajeAnterior"]
+- ["PSo16NSObjectProtocol", "puntajeMaximo"]
+- !private ["PSo16NSObjectProtocol", "quizHighScoreIdentifier"]
+- !private ["PSo16NSObjectProtocol", "quizRecentScoreIdentifier"]
+- !private ["PSo16NSObjectProtocol", "standard"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "viewDidAppear"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Sq", "deinit"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "clipsToBounds"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "clipsToBounds"]
+- !private ["PSo12UIAppearance", "layer"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "String"]
+- !private ["PSo21UIAppearanceContainer", "UserDefaults"]
+- ["PSo21UIAppearanceContainer", "btnIniciar"]
+- !private ["PSo21UIAppearanceContainer", "clipsToBounds"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
+- ["PSo21UIAppearanceContainer", "puntajeAnterior"]
+- ["PSo21UIAppearanceContainer", "puntajeMaximo"]
+- !private ["PSo21UIAppearanceContainer", "quizHighScoreIdentifier"]
+- !private ["PSo21UIAppearanceContainer", "quizRecentScoreIdentifier"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "viewDidAppear"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "clipsToBounds"]
+- !private ["CSo8UIButton", "layer"]
+- !private ["PSo18UIContentContainer", "String"]
+- !private ["PSo18UIContentContainer", "UserDefaults"]
+- ["PSo18UIContentContainer", "btnIniciar"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "puntajeAnterior"]
+- ["PSo18UIContentContainer", "puntajeMaximo"]
+- !private ["PSo18UIContentContainer", "quizHighScoreIdentifier"]
+- !private ["PSo18UIContentContainer", "quizRecentScoreIdentifier"]
+- ["PSo18UIContentContainer", "viewDidAppear"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["CSo9UIControl", "clipsToBounds"]
+- !private ["CSo9UIControl", "layer"]
+- !private ["PSo17UICoordinateSpace", "clipsToBounds"]
+- !private ["PSo17UICoordinateSpace", "layer"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "clipsToBounds"]
+- !private ["PSo13UIDynamicItem", "layer"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "String"]
+- !private ["PSo18UIFocusEnvironment", "UserDefaults"]
+- ["PSo18UIFocusEnvironment", "btnIniciar"]
+- !private ["PSo18UIFocusEnvironment", "clipsToBounds"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
+- ["PSo18UIFocusEnvironment", "puntajeAnterior"]
+- ["PSo18UIFocusEnvironment", "puntajeMaximo"]
+- !private ["PSo18UIFocusEnvironment", "quizHighScoreIdentifier"]
+- !private ["PSo18UIFocusEnvironment", "quizRecentScoreIdentifier"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "viewDidAppear"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "clipsToBounds"]
+- !private ["PSo11UIFocusItem", "layer"]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "Bool"]
+- !private ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UIButton"]
+- ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "UserDefaults"]
+- ["CSo11UIResponder", "btnIniciar"]
+- !private ["CSo11UIResponder", "clipsToBounds"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "layer"]
+- ["CSo11UIResponder", "puntajeAnterior"]
+- ["CSo11UIResponder", "puntajeMaximo"]
+- !private ["CSo11UIResponder", "quizHighScoreIdentifier"]
+- !private ["CSo11UIResponder", "quizRecentScoreIdentifier"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidAppear"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "String"]
+- !private ["PSo30UIResponderStandardEditActions", "UserDefaults"]
+- ["PSo30UIResponderStandardEditActions", "btnIniciar"]
+- !private ["PSo30UIResponderStandardEditActions", "clipsToBounds"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "layer"]
+- ["PSo30UIResponderStandardEditActions", "puntajeAnterior"]
+- ["PSo30UIResponderStandardEditActions", "puntajeMaximo"]
+- !private ["PSo30UIResponderStandardEditActions", "quizHighScoreIdentifier"]
+- !private ["PSo30UIResponderStandardEditActions", "quizRecentScoreIdentifier"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "String"]
+- !private ["PSo16UIStateRestoring", "UserDefaults"]
+- ["PSo16UIStateRestoring", "btnIniciar"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "puntajeAnterior"]
+- ["PSo16UIStateRestoring", "puntajeMaximo"]
+- !private ["PSo16UIStateRestoring", "quizHighScoreIdentifier"]
+- !private ["PSo16UIStateRestoring", "quizRecentScoreIdentifier"]
+- ["PSo16UIStateRestoring", "viewDidAppear"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "String"]
+- !private ["PSo18UITraitEnvironment", "UserDefaults"]
+- ["PSo18UITraitEnvironment", "btnIniciar"]
+- !private ["PSo18UITraitEnvironment", "clipsToBounds"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "layer"]
+- ["PSo18UITraitEnvironment", "puntajeAnterior"]
+- ["PSo18UITraitEnvironment", "puntajeMaximo"]
+- !private ["PSo18UITraitEnvironment", "quizHighScoreIdentifier"]
+- !private ["PSo18UITraitEnvironment", "quizRecentScoreIdentifier"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "viewDidAppear"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "clipsToBounds"]
+- !private ["CSo6UIView", "layer"]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "Bool"]
+- !private ["CSo16UIViewController", "String"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "UILabel"]
+- !private ["CSo16UIViewController", "UserDefaults"]
+- ["CSo16UIViewController", "btnIniciar"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "puntajeAnterior"]
+- ["CSo16UIViewController", "puntajeMaximo"]
+- !private ["CSo16UIViewController", "quizHighScoreIdentifier"]
+- !private ["CSo16UIViewController", "quizRecentScoreIdentifier"]
+- ["CSo16UIViewController", "viewDidAppear"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- ["CSo12UserDefaults", "deinit"]
+- !private ["CSo12UserDefaults", "integer"]
+- !private ["CSo12UserDefaults", "standard"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "clipsToBounds"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "layer"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps9_Hashable", "String"]
+- !private ["Ps9_Hashable", "UserDefaults"]
+- ["Ps9_Hashable", "btnIniciar"]
+- !private ["Ps9_Hashable", "clipsToBounds"]
+- !private ["Ps9_Hashable", "cornerRadius"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "integer"]
+- !private ["Ps9_Hashable", "layer"]
+- ["Ps9_Hashable", "puntajeAnterior"]
+- ["Ps9_Hashable", "puntajeMaximo"]
+- !private ["Ps9_Hashable", "quizHighScoreIdentifier"]
+- !private ["Ps9_Hashable", "quizRecentScoreIdentifier"]
+- !private ["Ps9_Hashable", "standard"]
+- !private ["Ps9_Hashable", "text"]
+- ["Ps9_Hashable", "viewDidAppear"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C6apis0123BeginQuizViewController"
+- "Sb"
+- "CSo7CALayer"
+- !private "PSo15CALayerDelegate"
+- !private "PSo13CAMediaTiming"
+- "V12CoreGraphics7CGFloat"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "SQ"
+- "Si"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Sq"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- "CSo12UserDefaults"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+interface-hash: "191f118cd8b35529da812012c7fae76f"
